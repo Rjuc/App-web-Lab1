@@ -1,15 +1,6 @@
-# Laboratorio: JavaScript y AJAX
+# Laboratorio de JavaScript y AJAX
 
-Página estática para resolver la actividad de JavaScript y AJAX. Está preparada para publicarse en GitHub Pages y no requiere paquetes ni servidor propio.
+En esta página reuní los cuatro ejercicios de JavaScript y la consulta AJAX del laboratorio. La publiqué en [GitHub Pages](https://rjuc.github.io/App-web-Lab1/).
 
-## Archivos
-- `index.html`: ejercicios, navegación y zonas para mostrar la respuesta AJAX.
-- `styles.css`: paleta cálida de blancos, grises y marrones claros; diseño adaptable con navegación fluida entre ejercicios.
-- `app.js`: palíndromo, comparación de números, presencia y recuento de vocales, y petición AJAX con `XMLHttpRequest`.
-- `Informe_Laboratorio_JavaScript_AJAX.pdf`: explicación breve en primera persona, con espacios para capturas y para el enlace público.
-
-## Publicación
-Sube los archivos de la página (`index.html`, `styles.css` y `app.js`) al repositorio que vayas a usar para GitHub Pages. Cuando la publiques, añade la URL al espacio reservado del informe.
-
-Para consultar otras páginas, su servidor debe permitir el acceso mediante CORS. El navegador bloqueará la lectura de las respuestas de los sitios que no lo permitan.
+La estructura está en `index.html`, los estilos en `styles.css` y la lógica en `app.js`. La consulta AJAX usa `XMLHttpRequest`; para leer una respuesta de otro sitio, ese servidor debe permitir el acceso mediante CORS.
 
