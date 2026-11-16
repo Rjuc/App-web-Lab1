@@ -71,7 +71,9 @@ document.querySelector('#ajax-form').addEventListener('submit', (event) => {
     if (nombres[peticion.readyState]) actualizarEstado(nombres[peticion.readyState]);
   };
   peticion.onload = () => {
-    estadoHTTP.textContent = `${peticion.status} ${peticion.statusText || '(sin texto de estado)'}`;
+    const textosHTTP = { 200: 'OK', 201: 'Creado', 204: 'Sin contenido', 400: 'Solicitud incorrecta', 401: 'No autorizado', 403: 'Prohibido', 404: 'No encontrado', 500: 'Error interno del servidor' };
+    const textoEstado = peticion.statusText || textosHTTP[peticion.status] || 'Respuesta recibida';
+    estadoHTTP.textContent = `${peticion.status} ${textoEstado}`;
     cabeceras.textContent = peticion.getAllResponseHeaders() || 'El servidor no envió cabeceras legibles.';
     contenido.textContent = peticion.responseText || '(La respuesta no contiene texto.)';
     boton.disabled = false;
