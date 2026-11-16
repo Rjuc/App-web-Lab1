@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ejercicios básicos de JavaScript y una consulta AJAX en una página sencilla.">
+  <title>Laboratorio | JavaScript y AJAX</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="page-header">
+    <p class="eyebrow">Laboratorio 2 · Desarrollo web</p>
+    <h1>JavaScript y AJAX</h1>
+    <p>Cuatro ejercicios de JavaScript y una petición AJAX explicados en una sola página.</p>
+  </header>
+
+  <nav class="route-nav" aria-label="Recorrido por los ejercicios">
+    <a href="#palindromo"><span>01</span> Palíndromo</a>
+    <a href="#mayor"><span>02</span> Comparación</a>
+    <a href="#vocales"><span>03</span> Vocales</a>
+    <a href="#ajax"><span>04</span> AJAX</a>
+  </nav>
+  <main>
+    <section class="card" aria-labelledby="js-title">
+      <div class="section-heading"><span class="number">01</span><div><p class="eyebrow">Práctica</p><h2 id="js-title">Ejercicios de JavaScript</h2></div></div>
+      <article class="exercise" id="palindromo">
+        <h3>¿Es un palíndromo?</h3><p>Escribe una palabra o frase. Se ignoran los espacios, signos y mayúsculas.</p>
+        <form id="palindrome-form"><label for="palindrome-input">Texto</label><div class="inline"><input id="palindrome-input" type="text" placeholder="Anita lava la tina" required><button type="submit">Comprobar</button></div></form><p class="result" id="palindrome-result" aria-live="polite"></p><a class="next-step" href="#mayor">Siguiente ejercicio <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="exercise" id="mayor">
+        <h3>¿Cuál número es mayor?</h3><p>Introduce dos números para compararlos.</p>
+        <form id="compare-form"><div class="inline"><div><label for="number-a">Primer número</label><input id="number-a" type="number" step="any" required></div><div><label for="number-b">Segundo número</label><input id="number-b" type="number" step="any" required></div><button type="submit">Comparar</button></div></form><p class="result" id="compare-result" aria-live="polite"></p><a class="next-step" href="#vocales">Siguiente ejercicio <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="exercise" id="vocales">
+        <h3>Vocales de una frase</h3><p>El primer resultado muestra las vocales que aparecen y el segundo cuántas veces aparece cada una.</p>
+        <form id="vowels-form"><label for="vowels-input">Frase</label><div class="inline"><input id="vowels-input" type="text" placeholder="Escribe una frase" required><button type="submit">Contar vocales</button></div></form><p class="result" id="vowels-result" aria-live="polite"></p><p class="result secondary" id="vowels-count-result" aria-live="polite"></p><a class="next-step" href="#ajax">Siguiente ejercicio <span aria-hidden="true">→</span></a>
+      </article>
+    </section>
+
+    <section class="card" id="ajax" aria-labelledby="ajax-title">
+      <div class="section-heading"><span class="number">02</span><div><p class="eyebrow">Petición asíncrona</p><h2 id="ajax-title">Consulta AJAX</h2></div></div>
+      <p>Introduce una URL y consulta la respuesta sin salir de esta página. La dirección inicial es la de este mismo sitio.</p>
+      <form id="ajax-form"><label for="url-input">URL que quiero consultar</label><div class="inline"><input id="url-input" type="url" required><button id="fetch-button" type="submit">Mostrar contenidos</button></div></form>
+      <div class="ajax-grid">
+        <article class="info-panel"><h3>Estado de la petición</h3><ol id="request-states" class="state-list"><li class="current">No iniciada</li></ol></article>
+        <article class="info-panel"><h3>Código de estado</h3><p id="http-status" class="placeholder">Todavía no hay respuesta.</p></article>
+        <article class="info-panel"><h3>Cabeceras HTTP</h3><pre id="response-headers" class="output placeholder">Las cabeceras aparecerán aquí.</pre></article>
+        <article class="info-panel"><h3>Contenidos</h3><pre id="response-content" class="output placeholder">El contenido de la respuesta aparecerá aquí.</pre></article>
+      </div>
+      <a class="next-step top-link" href="#palindromo">Volver al primer ejercicio <span aria-hidden="true">↑</span></a><p class="note">Algunas páginas externas bloquean peticiones desde otros sitios por seguridad (CORS). En ese caso el navegador no permite leer su respuesta.</p>
+    </section>
+  </main>
+  <footer><p>Laboratorio de tecnologías web · JavaScript sin librerías adicionales</p></footer>
+</body>
+</html>
+
+
+
+
+
